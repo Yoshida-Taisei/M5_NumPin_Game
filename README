@@ -1,0 +1,65 @@
+# 数字消しゲーム
+
+M5Stack Core2 を用いて、3×3 に表示される数字を「小さい順」にタッチして消していくゲームです。  
+全ての数字を正しい順序で消し終わったときの経過時間がスコアとなります。
+
+---
+
+## Qiita
+
+https://qiita.com/taiyyytai/items/923e7e489e06ad1044d9
+
+
+<iframe width="717" height="814" src="https://www.youtube.com/embed/iUztmdL0dxo" title="M5stackCore2 countup game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## ハードウェア
+
+- [M5Stack Core2](https://docs.m5stack.com/en/core/core2)
+
+## 使用ライブラリ
+
+- [M5Core2](https://github.com/m5stack/M5Core2)
+- [LovyanGFX](https://github.com/lovyan03/LovyanGFX)
+
+---
+
+## ゲーム概要
+
+- 3×3 のマスに数字(1～20)がランダムに表示されます。  
+  - **重複しない**ように配置  
+- 表示された数字のうち、**現在最も小さい数字**をタッチして消していきます。  
+- 全部の数字を正しい順番で消し終わるとゲームクリア！  
+- クリアまでにかかった時間（経過時間）がスコアとなります。
+
+---
+
+## ゲーム仕様
+
+1. **数字の表示**  
+   - 3×3 のマスにランダムに数字(1～20)を表示  
+   - 数字は重複なし
+
+2. **タッチした数字の判定**  
+   - タッチ座標を取得  
+   - どのマス（数字）をタッチしたかを判定
+
+3. **消す順番のチェック**  
+   - 現在表示中の数字の中から最小値を検索  
+   - タッチされた数字が最小値の場合：数字を消去して正解演出  
+   - タッチされた数字が最小値以外の場合：不正解演出を表示
+
+4. **クリア判定とクリア後の処理**  
+   - 表示されている数字がすべて消えたら、タイマーを止めてスコアを表示  
+   - リトライボタンを配置し、再度ゲームを開始できるようにする
+
+---
+
+## 開発手順
+
+1. **数字の表示**  
+   - 3×3 のマス目を描画し、1～20 の数字をランダムに配置  
+   - 重複しないようにランダム生成し、画面に表示
+
+2. **タッチした数字を判定する**  
+   - タッチ座標を取得  
+ 
