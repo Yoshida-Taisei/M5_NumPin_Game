@@ -10,8 +10,6 @@ M5Stack Core2 を用いて、3×3 に表示される数字を「小さい順」�
 https://qiita.com/taiyyytai/items/923e7e489e06ad1044d9
 
 
-<iframe width="717" height="814" src="https://www.youtube.com/embed/iUztmdL0dxo" title="M5stackCore2 countup game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## ハードウェア
 
 - [M5Stack Core2](https://docs.m5stack.com/en/core/core2)
@@ -54,12 +52,5 @@ https://qiita.com/taiyyytai/items/923e7e489e06ad1044d9
 
 ---
 
-## 開発手順
 
-1. **数字の表示**  
-   - 3×3 のマス目を描画し、1～20 の数字をランダムに配置  
-   - 重複しないようにランダム生成し、画面に表示
-
-2. **タッチした数字を判定する**  
-   - タッチ座標を取得  
  
